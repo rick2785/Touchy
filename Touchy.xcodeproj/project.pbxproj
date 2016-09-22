@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2036FF0E1D9460CD00C176FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036FF0D1D9460CD00C176FC /* AppDelegate.swift */; };
-		2036FF101D9460CD00C176FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036FF0F1D9460CD00C176FC /* ViewController.swift */; };
+		2036FF101D9460CD00C176FC /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036FF0F1D9460CD00C176FC /* AuthenticationVC.swift */; };
 		2036FF131D9460CD00C176FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2036FF111D9460CD00C176FC /* Main.storyboard */; };
 		2036FF151D9460CD00C176FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2036FF141D9460CD00C176FC /* Assets.xcassets */; };
 		2036FF181D9460CD00C176FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2036FF161D9460CD00C176FC /* LaunchScreen.storyboard */; };
+		2036FF231D9464E200C176FC /* RoundedOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036FF221D9464E200C176FC /* RoundedOutlineView.swift */; };
+		2036FF261D9469BA00C176FC /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2036FF251D9469BA00C176FC /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2036FF0A1D9460CC00C176FC /* Touchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2036FF0D1D9460CD00C176FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2036FF0F1D9460CD00C176FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2036FF0F1D9460CD00C176FC /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		2036FF121D9460CD00C176FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2036FF141D9460CD00C176FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2036FF171D9460CD00C176FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2036FF191D9460CE00C176FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2036FF221D9464E200C176FC /* RoundedOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineView.swift; sourceTree = "<group>"; };
+		2036FF251D9469BA00C176FC /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2036FF261D9469BA00C176FC /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				2036FF0C1D9460CC00C176FC /* Touchy */,
 				2036FF0B1D9460CC00C176FC /* Products */,
+				2036FF241D9469BA00C176FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +60,47 @@
 		2036FF0C1D9460CC00C176FC /* Touchy */ = {
 			isa = PBXGroup;
 			children = (
+				2036FF211D9460EA00C176FC /* Model */,
+				2036FF201D9460E500C176FC /* View */,
+				2036FF1F1D9460DE00C176FC /* Controller */,
 				2036FF0D1D9460CD00C176FC /* AppDelegate.swift */,
-				2036FF0F1D9460CD00C176FC /* ViewController.swift */,
 				2036FF111D9460CD00C176FC /* Main.storyboard */,
 				2036FF141D9460CD00C176FC /* Assets.xcassets */,
 				2036FF161D9460CD00C176FC /* LaunchScreen.storyboard */,
 				2036FF191D9460CE00C176FC /* Info.plist */,
 			);
 			path = Touchy;
+			sourceTree = "<group>";
+		};
+		2036FF1F1D9460DE00C176FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2036FF0F1D9460CD00C176FC /* AuthenticationVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2036FF201D9460E500C176FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2036FF221D9464E200C176FC /* RoundedOutlineView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2036FF211D9460EA00C176FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2036FF241D9469BA00C176FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2036FF251D9469BA00C176FC /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2036FF101D9460CD00C176FC /* ViewController.swift in Sources */,
+				2036FF101D9460CD00C176FC /* AuthenticationVC.swift in Sources */,
+				2036FF231D9464E200C176FC /* RoundedOutlineView.swift in Sources */,
 				2036FF0E1D9460CD00C176FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +342,7 @@
 				2036FF1E1D9460CE00C176FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
